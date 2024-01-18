@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="IPE.SmsIrClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IPE.SmsIr.NetFramework.1.0.1\lib\net451\IPE.SmsIrClient.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.PersianDateTime, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MD.PersianDateTime.4.5.0\lib\net20\MD.PersianDateTime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,11 +52,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\GetCurrentCreditSamples.cs" />
+    <Compile Include="Account\GetLinesSamples.cs" />
+    <Compile Include="Helpers\EnumHelpers.cs" />
+    <Compile Include="Helpers\UnixTimeHelpers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\Models\DeliveryState.cs" />
+    <Compile Include="Report\Receive\GetLatestReceivesSamples.cs" />
+    <Compile Include="Report\Receive\GetReceiveArchiveReportSamples.cs" />
+    <Compile Include="Report\Receive\GetReceiveLiveReportSamples.cs" />
+    <Compile Include="Report\Send\GetSendArchiveReportSamples.cs" />
+    <Compile Include="Report\Send\GetSendLiveReportSamples.cs" />
+    <Compile Include="Report\Send\GetSendPackSamples.cs" />
+    <Compile Include="Report\Send\GetSendPacksSamples.cs" />
+    <Compile Include="Report\Send\GetSingleMessageSamples.cs" />
+    <Compile Include="Send\RemoveScheduledPackSamples.cs" />
+    <Compile Include="Send\SendBulkSamples.cs" />
+    <Compile Include="Send\SendLikeToLikeSamples.cs" />
+    <Compile Include="Send\SendVerifySamples.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="smsir-package-icon.ico" />
+    <Content Include="smsir-package-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
